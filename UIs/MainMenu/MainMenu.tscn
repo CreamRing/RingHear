@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsogr3yqigt3g"]
+
+[ext_resource type="Script" uid="uid://citmygnyfhdmp" path="res://UIs/MainMenu/MainMenu.gd" id="1_n22gw"]
+[ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_haing"]
+[ext_resource type="Texture2D" uid="uid://bl35i6htkyajl" path="res://Textures/MainMenu/Interval.png" id="2_qw1uv"]
+[ext_resource type="FontFile" uid="uid://dn8fjoyn2p6ru" path="res://Fonts/站酷文艺体.ttf" id="3_0l7xe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_haing"]
+font = ExtResource("3_0l7xe")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_n22gw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(640, 360)
+theme = ExtResource("2_haing")
+
+[node name="VBox" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -584.0
+offset_top = -512.0
+offset_right = 592.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 1
+
+[node name="HBox" type="HBoxContainer" parent="Control/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Interval" type="TextureButton" parent="Control/VBox/HBox"]
+layout_mode = 2
+texture_normal = ExtResource("2_qw1uv")
+texture_pressed = ExtResource("2_qw1uv")
+texture_hover = ExtResource("2_qw1uv")
+texture_disabled = ExtResource("2_qw1uv")
+texture_focused = ExtResource("2_qw1uv")
+
+[node name="Text" type="Label" parent="Control/VBox/HBox/Interval"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_right = 63.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "音程听辨"
+label_settings = SubResource("LabelSettings_haing")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/VBox/HBox/Interval" to="." method="goto_interval_test"]

@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="RingHear"
+config/name="圈圈练耳"
 config/version="0.0.1"
+run/main_scene="uid://c2wruaye5xk3w"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="RINGHEAR"
 config/features=PackedStringArray("4.5", "Mobile")
@@ -19,7 +20,7 @@ boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="res://icon.svg"
+config/icon="uid://cgsyndc12ix7s"
 
 [display]
 
@@ -33,4 +34,5 @@ project/assembly_name="RingHear"
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(1, 1, 1, 1)

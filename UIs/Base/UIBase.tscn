@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://blrqe4skpupok"]
+
+[ext_resource type="Script" uid="uid://clhs2gehpk8f0" path="res://UIs/Base/UIBase.gd" id="1_pdcyn"]
+[ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_5wkmu"]
+
+[node name="UIBase" type="CanvasLayer"]
+script = ExtResource("1_pdcyn")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5wkmu")
