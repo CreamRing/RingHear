@@ -18,5 +18,5 @@ func backto_mainmenu() -> void:
 	exit();
 
 func change_scene_to_mainmenu():
-	var mainmenu = preload("res://UIs/MainMenu/MainMenu.tscn").instantiate();
+	var mainmenu = load("res://UIs/MainMenu/MainMenu.tscn").instantiate();
 	get_parent().add_child(mainmenu);
