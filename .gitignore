@@ -1,0 +1,28 @@
+# Godot 自动生成文件
+.import/
+export.cfg
+export_presets.cfg
+*.import
+*.godot.*.autosave
+.godot/
+/android/
+
+# 编译产物（Visual Studio 相关）
+bin/
+obj/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+.vs/
+
+# 编辑器缓存
+.idea/
+.vscode/
+*.sdf
+*.suo
+*.opensdf
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
