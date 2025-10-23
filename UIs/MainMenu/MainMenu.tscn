@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://citmygnyfhdmp" path="res://UIs/MainMenu/MainMenu.gd" id="1_n22gw"]
 [ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_haing"]
-[ext_resource type="Texture2D" uid="uid://bl35i6htkyajl" path="res://Textures/MainMenu/Interval.png" id="2_qw1uv"]
-[ext_resource type="FontFile" uid="uid://dn8fjoyn2p6ru" path="res://Fonts/站酷文艺体.ttf" id="3_0l7xe"]
+[ext_resource type="Texture2D" uid="uid://qvx1rwjwuysx" path="res://Textures/MainMenu/Interval.png" id="2_qw1uv"]
+[ext_resource type="FontFile" uid="uid://7ipb7fpajqfe" path="res://Fonts/站酷文艺体.ttf" id="3_0l7xe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_haing"]
 font = ExtResource("3_0l7xe")
-font_size = 24
+font_size = 48
 font_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="CanvasLayer"]
@@ -56,9 +56,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -63.0
-offset_right = 63.0
-offset_bottom = 32.0
+offset_left = -96.0
+offset_right = 96.0
+offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "音程听辨"

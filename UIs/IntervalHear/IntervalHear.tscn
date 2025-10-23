@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cjss5mnhsgj8c" path="res://UIs/IntervalHear/IntervalHear.gd" id="1_mermw"]
 [ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_we4x4"]
-[ext_resource type="Texture2D" uid="uid://bxvinsq4l5a2l" path="res://Textures/back.png" id="3_tp6jn"]
+[ext_resource type="Texture2D" uid="uid://d2df0tvtntyx4" path="res://Textures/back.png" id="3_tp6jn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_we4x4"]
 
@@ -22,14 +22,14 @@ theme = ExtResource("2_we4x4")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 64.0
+offset_bottom = 100.0
 grow_horizontal = 2
 
 [node name="Exit" type="TextureButton" parent="Control/ExitPanel"]
 layout_mode = 1
 offset_left = 16.0
-offset_right = 80.0
-offset_bottom = 64.0
+offset_right = 116.0
+offset_bottom = 100.0
 texture_normal = ExtResource("3_tp6jn")
 texture_pressed = ExtResource("3_tp6jn")
 texture_hover = ExtResource("3_tp6jn")
@@ -43,7 +43,7 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -656.0
+offset_top = -620.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_we4x4")
@@ -54,7 +54,7 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -656.0
+offset_top = -620.0
 grow_horizontal = 2
 grow_vertical = 0
 
