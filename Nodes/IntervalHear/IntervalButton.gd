@@ -8,6 +8,9 @@ func _ready() -> void:
 		button_pressed = false;
 
 func select(toggled_on: bool):
+	var note_height = NoteHeight.new();
+	note_height.set_name("D#2");
+	print(note_height.number);
 	if (toggled_on):
 		if (!IntervalHearManager.properties.has(name)):
 			IntervalHearManager.properties.append(name);
