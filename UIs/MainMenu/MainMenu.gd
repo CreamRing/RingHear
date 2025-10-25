@@ -18,5 +18,5 @@ func goto_interval_test() -> void:
 	exit();
 	
 func change_scene_to_interval():
-	var interval_ui = load("res://UIs/IntervalHear/IntervalHear.tscn").instantiate();
+	var interval_ui = load("uid://cjb3chmryisy3").instantiate();
 	get_parent().add_child(interval_ui);

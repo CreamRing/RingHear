@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2wruaye5xk3w"]
+[gd_scene load_steps=3 format=3 uid="uid://c2wruaye5xk3w"]
 
 [ext_resource type="Script" uid="uid://dm0i083mriq82" path="res://Scenes/MainScene.gd" id="1_tr2i4"]
+[ext_resource type="Texture2D" uid="uid://dsb37vdj1jhl4" path="res://Textures/Background.png" id="2_tr2i4"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_tr2i4")
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="Control" type="TextureRect" parent="Background"]
+modulate = Color(1, 1, 1, 0.5882353)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tr2i4")
+expand_mode = 3
+stretch_mode = 5

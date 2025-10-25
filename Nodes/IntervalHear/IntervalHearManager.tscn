@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj1npy72aipnb"]
+
+[ext_resource type="Script" uid="uid://cww4bir64inhf" path="res://Nodes/IntervalHear/IntervalHearManager.gd" id="1_vxim4"]
+
+[node name="IntervalHearManager" type="Node"]
+script = ExtResource("1_vxim4")

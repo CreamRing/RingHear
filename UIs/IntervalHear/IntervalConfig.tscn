@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjb3chmryisy3"]
+
+[ext_resource type="Script" uid="uid://cjss5mnhsgj8c" path="res://UIs/IntervalHear/IntervalConfig.gd" id="1_ns74h"]
+[ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_02kak"]
+[ext_resource type="Texture2D" uid="uid://vn2dg5lpxkku" path="res://Textures/Back.png" id="3_0no1s"]
+
+[node name="IntervalHear" type="CanvasLayer"]
+script = ExtResource("1_ns74h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_02kak")
+
+[node name="Board" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="Exit" type="TextureButton" parent="Control/Board"]
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+texture_normal = ExtResource("3_0no1s")
+texture_pressed = ExtResource("3_0no1s")
+texture_hover = ExtResource("3_0no1s")
+texture_disabled = ExtResource("3_0no1s")
+texture_focused = ExtResource("3_0no1s")
+stretch_mode = 0
+
+[node name="OptionsScroll" type="ScrollContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+
+[node name="OptionsBox" type="VBoxContainer" parent="Control/OptionsScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="IntervalSelector" type="Button" parent="Control/OptionsScroll/OptionsBox"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "音程选择"
+
+[connection signal="pressed" from="Control/Board/Exit" to="." method="backto_mainmenu"]
+[connection signal="pressed" from="Control/OptionsScroll/OptionsBox/IntervalSelector" to="." method="goto_interval_selector"]

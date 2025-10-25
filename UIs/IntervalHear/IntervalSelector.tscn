@@ -1,0 +1,126 @@
+[gd_scene load_steps=5 format=3 uid="uid://cidqm1l7p2iil"]
+
+[ext_resource type="Script" uid="uid://dq3ng5b6sjjkt" path="res://UIs/IntervalHear/IntervalSelector.gd" id="1_e24sb"]
+[ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_ixohn"]
+[ext_resource type="Texture2D" uid="uid://dvqktw8hpvr6x" path="res://Textures/OK.png" id="3_erprv"]
+[ext_resource type="Script" uid="uid://dbdcegcos2owc" path="res://Nodes/IntervalHear/IntervalButton.gd" id="4_mvgqi"]
+
+[node name="IntervalSelector" type="CanvasLayer"]
+script = ExtResource("1_e24sb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ixohn")
+
+[node name="Board" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="Exit" type="TextureButton" parent="Control/Board"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_erprv")
+texture_pressed = ExtResource("3_erprv")
+texture_hover = ExtResource("3_erprv")
+texture_disabled = ExtResource("3_erprv")
+texture_focused = ExtResource("3_erprv")
+stretch_mode = 0
+
+[node name="IntervalScroll" type="ScrollContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="IntervalBox" type="VBoxContainer" parent="Control/IntervalScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 5
+
+[node name="m2" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "小二度"
+script = ExtResource("4_mvgqi")
+
+[node name="M2" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "大二度"
+script = ExtResource("4_mvgqi")
+
+[node name="m3" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "小三度"
+script = ExtResource("4_mvgqi")
+
+[node name="M3" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "大三度"
+script = ExtResource("4_mvgqi")
+
+[node name="p4" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "纯四度"
+script = ExtResource("4_mvgqi")
+
+[node name="d5" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "减五度"
+script = ExtResource("4_mvgqi")
+
+[node name="p5" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "纯五度"
+script = ExtResource("4_mvgqi")
+
+[node name="m6" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "小六度"
+script = ExtResource("4_mvgqi")
+
+[node name="M6" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "大六度"
+script = ExtResource("4_mvgqi")
+
+[node name="m7" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "小七度"
+script = ExtResource("4_mvgqi")
+
+[node name="M7" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "大七度"
+script = ExtResource("4_mvgqi")
+
+[connection signal="pressed" from="Control/Board/Exit" to="." method="back_page"]
