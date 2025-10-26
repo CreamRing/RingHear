@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dq3ng5b6sjjkt" path="res://UIs/IntervalHear/IntervalSelector.gd" id="1_e24sb"]
 [ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_ixohn"]
 [ext_resource type="Texture2D" uid="uid://dvqktw8hpvr6x" path="res://Textures/OK.png" id="3_erprv"]
-[ext_resource type="Script" uid="uid://dbdcegcos2owc" path="res://Nodes/IntervalHear/IntervalButton.gd" id="4_mvgqi"]
+[ext_resource type="Script" uid="uid://dbdcegcos2owc" path="res://Nodes/IntervalHear/IntervalSelectButton.gd" id="4_mvgqi"]
 
 [node name="IntervalSelector" type="CanvasLayer"]
 script = ExtResource("1_e24sb")

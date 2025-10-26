@@ -54,5 +54,11 @@ layout_mode = 2
 size_flags_vertical = 4
 text = "音程选择"
 
+[node name="RangeSelector" type="Button" parent="Control/OptionsScroll/OptionsBox"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "音高范围选择"
+
 [connection signal="pressed" from="Control/Board/Exit" to="." method="backto_mainmenu"]
 [connection signal="pressed" from="Control/OptionsScroll/OptionsBox/IntervalSelector" to="." method="goto_interval_selector"]
+[connection signal="pressed" from="Control/OptionsScroll/OptionsBox/RangeSelector" to="." method="goto_interval_rangeselector"]

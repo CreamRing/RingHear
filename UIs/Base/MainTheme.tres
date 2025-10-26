@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://nfr02i1mcx56"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://nfr02i1mcx56"]
 
 [ext_resource type="FontFile" uid="uid://dn8fjoyn2p6ru" path="res://Fonts/站酷文艺体.ttf" id="1_o184j"]
 [ext_resource type="Texture2D" uid="uid://v304u0sjgdkn" path="res://Textures/Ensure.png" id="2_lf27h"]
@@ -14,6 +14,8 @@ bg_color = Color(0.49019608, 0.49019608, 0.49019608, 0.39215687)
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_c8tf4"]
 color = Color(0.4117647, 0.4117647, 0.4117647, 0.78431374)
 thickness = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lf27h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o184j"]
 bg_color = Color(0.54901963, 0.54901963, 0.54901963, 1)
@@ -37,14 +39,29 @@ Button/styles/normal = SubResource("StyleBoxFlat_cyt33")
 Button/styles/pressed = SubResource("StyleBoxFlat_cyt33")
 CheckButton/icons/checked = ExtResource("2_lf27h")
 CheckButton/icons/unchecked = ExtResource("3_cyt33")
-CheckButton/styles/disabled = SubResource("StyleBoxFlat_cyt33")
 CheckButton/styles/focus = SubResource("StyleBoxFlat_cyt33")
 CheckButton/styles/hover = SubResource("StyleBoxFlat_cyt33")
 CheckButton/styles/hover_pressed = SubResource("StyleBoxFlat_cyt33")
 CheckButton/styles/normal = SubResource("StyleBoxFlat_cyt33")
-CheckButton/styles/pressed = SubResource("StyleBoxFlat_cyt33")
+CheckButton/styles/pressed = null
 HSeparator/constants/separation = 32
 HSeparator/styles/separator = SubResource("StyleBoxLine_c8tf4")
+ItemList/colors/font_color = Color(0, 0, 0, 1)
+ItemList/colors/font_hovered_color = Color(0, 0, 0, 1)
+ItemList/colors/font_hovered_selected_color = Color(0, 0, 0, 1)
+ItemList/colors/font_selected_color = Color(0, 0, 0, 1)
+ItemList/colors/guide_color = Color(0.69803923, 0.69803923, 0.69803923, 0)
+ItemList/font_sizes/font_size = 48
+ItemList/fonts/font = ExtResource("1_o184j")
+ItemList/styles/cursor = SubResource("StyleBoxEmpty_lf27h")
+ItemList/styles/cursor_unfocused = SubResource("StyleBoxEmpty_lf27h")
+ItemList/styles/focus = SubResource("StyleBoxEmpty_lf27h")
+ItemList/styles/hovered = SubResource("StyleBoxEmpty_lf27h")
+ItemList/styles/hovered_selected = SubResource("StyleBoxEmpty_lf27h")
+ItemList/styles/hovered_selected_focus = SubResource("StyleBoxEmpty_lf27h")
+ItemList/styles/panel = SubResource("StyleBoxEmpty_lf27h")
+ItemList/styles/selected = SubResource("StyleBoxEmpty_lf27h")
+ItemList/styles/selected_focus = SubResource("StyleBoxEmpty_lf27h")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/font_sizes/font_size = 48
 Label/fonts/font = ExtResource("1_o184j")

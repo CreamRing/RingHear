@@ -1,0 +1,251 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqtbc41xm4dyq"]
+
+[ext_resource type="Texture2D" uid="uid://dvqktw8hpvr6x" path="res://Textures/OK.png" id="1_gby5d"]
+[ext_resource type="Script" uid="uid://diwx4njjkyu44" path="res://UIs/IntervalHear/IntervalRangeSelector.gd" id="1_vnynt"]
+[ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_ta2y4"]
+[ext_resource type="FontFile" uid="uid://c7uvh0vhevwtq" path="res://Fonts/Virtuoso.ttf" id="4_jy744"]
+
+[node name="IntervalRangeSelector" type="CanvasLayer"]
+script = ExtResource("1_vnynt")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_ta2y4")
+
+[node name="Board" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+size_flags_vertical = 5
+size_flags_stretch_ratio = 0.2
+
+[node name="Exit" type="TextureButton" parent="Control/Board"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+texture_normal = ExtResource("1_gby5d")
+texture_pressed = ExtResource("1_gby5d")
+texture_hover = ExtResource("1_gby5d")
+texture_disabled = ExtResource("1_gby5d")
+texture_focused = ExtResource("1_gby5d")
+stretch_mode = 0
+
+[node name="Highest" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -232.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_vertical = 2
+
+[node name="Name" type="ScrollContainer" parent="Control/Highest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -24.0
+offset_right = -19.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+metadata/_edit_group_ = true
+
+[node name="NameList" type="ItemList" parent="Control/Highest/Name"]
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 7
+item_0/text = "C"
+item_1/text = "D"
+item_2/text = "E"
+item_3/text = "F"
+item_4/text = "G"
+item_5/text = "A"
+item_6/text = "B"
+
+[node name="Octave" type="ScrollContainer" parent="Control/Highest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -64.0
+offset_right = 56.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+metadata/_edit_group_ = true
+
+[node name="OctaveList" type="ItemList" parent="Control/Highest/Octave"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_jy744")
+theme_override_font_sizes/font_size = 49
+auto_width = true
+auto_height = true
+item_count = 3
+item_0/text = "#"
+item_1/text = "#"
+item_2/text = "b"
+
+[node name="Alter" type="ScrollContainer" parent="Control/Highest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -24.0
+offset_right = 19.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+metadata/_edit_group_ = true
+
+[node name="AlterList" type="ItemList" parent="Control/Highest/Alter"]
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 7
+item_0/text = "C"
+item_1/text = "D"
+item_2/text = "E"
+item_3/text = "F"
+item_4/text = "G"
+item_5/text = "A"
+item_6/text = "B"
+
+[node name="Lowest" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_top = -232.0
+offset_right = 1280.0
+offset_bottom = 360.0
+grow_vertical = 2
+
+[node name="Name" type="ScrollContainer" parent="Control/Lowest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -24.0
+offset_right = -19.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+metadata/_edit_group_ = true
+
+[node name="NameList" type="ItemList" parent="Control/Lowest/Name"]
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 7
+item_0/text = "C"
+item_1/text = "D"
+item_2/text = "E"
+item_3/text = "F"
+item_4/text = "G"
+item_5/text = "A"
+item_6/text = "B"
+
+[node name="Octave" type="ScrollContainer" parent="Control/Lowest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -24.0
+offset_right = 56.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+metadata/_edit_group_ = true
+
+[node name="OctaveList" type="ItemList" parent="Control/Lowest/Octave"]
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 7
+item_0/text = "C"
+item_1/text = "D"
+item_2/text = "E"
+item_3/text = "F"
+item_4/text = "G"
+item_5/text = "A"
+item_6/text = "B"
+
+[node name="Alter" type="ScrollContainer" parent="Control/Lowest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.5
+offset_top = -24.0
+offset_right = 18.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+metadata/_edit_group_ = true
+
+[node name="AlterList" type="ItemList" parent="Control/Lowest/Alter"]
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 7
+item_0/text = "C"
+item_1/text = "D"
+item_2/text = "E"
+item_3/text = "F"
+item_4/text = "G"
+item_5/text = "A"
+item_6/text = "B"
+
+[connection signal="pressed" from="Control/Board/Exit" to="." method="backto_config"]

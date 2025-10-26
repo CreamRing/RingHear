@@ -26,3 +26,11 @@ func goto_interval_selector() -> void:
 func change_scene_to_interval_selector():
 	var interval_selector = load("uid://cidqm1l7p2iil").instantiate();
 	get_parent().add_child(interval_selector);
+	
+func change_scene_to_interval_rangeselector():
+	var interval_selector = load("uid://cidqm1l7p2iil").instantiate();
+	get_parent().add_child(interval_selector);
+
+func goto_interval_rangeselector() -> void:
+	connect("on_exit", change_scene_to_interval_rangeselector);
+	exit();

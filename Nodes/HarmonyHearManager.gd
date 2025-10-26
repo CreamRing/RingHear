@@ -11,6 +11,9 @@ enum TestState {
 	End,
 }
 
+static var root_note_highest;
+static var root_note_lowest;
+
 static var test_state: TestState = TestState.Stop;
 
 func init():
