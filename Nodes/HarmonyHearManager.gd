@@ -11,8 +11,8 @@ enum TestState {
 	End,
 }
 
-static var root_note_highest;
-static var root_note_lowest;
+static var note_highest: String;
+static var note_lowest: String;
 
 static var test_state: TestState = TestState.Stop;
 

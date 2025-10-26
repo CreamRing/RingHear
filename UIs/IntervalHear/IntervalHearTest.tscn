@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://d06snlge6oonl"]
+
+[ext_resource type="Texture2D" uid="uid://vn2dg5lpxkku" path="res://Textures/Back.png" id="1_40pc0"]
+[ext_resource type="Script" uid="uid://067krvfstyiq" path="res://UIs/IntervalHear/IntervalHearTest.gd" id="1_dyy6s"]
+
+[node name="IntervalHearTest" type="CanvasLayer"]
+script = ExtResource("1_dyy6s")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Board" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+size_flags_vertical = 5
+size_flags_stretch_ratio = 0.2
+
+[node name="Exit" type="TextureButton" parent="Control/Board"]
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+texture_normal = ExtResource("1_40pc0")
+texture_pressed = ExtResource("1_40pc0")
+texture_hover = ExtResource("1_40pc0")
+texture_disabled = ExtResource("1_40pc0")
+texture_focused = ExtResource("1_40pc0")
+stretch_mode = 0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -272.0
+grow_horizontal = 2
+grow_vertical = 0

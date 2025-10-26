@@ -4,10 +4,11 @@ class_name IntervalHearManager;
 static var properties: Array = [];
 static var property_anwsers: Array = [];
 
+var root_note = "";
+
 const save_path = "user://harmony_save.sav";
 
 static func load_file():
-	print_debug("Interval Loaded");
 	if (!FileAccess.file_exists(save_path)):
 		save_file();
 		return;
@@ -21,19 +22,25 @@ static func load_file():
 			properties = data["Properties"];
 		if (data.has("PropertyAnwsers")):
 			property_anwsers = data["PropertyAnwsers"];
+		if (data.has("NoteHighest")):
+			note_highest = data["NoteHighest"];
+		if (data.has("NoteLowest")):
+			note_lowest = data["NoteLowest"];
 	
 static func save_file():
 	var file: FileAccess = FileAccess.open(save_path, FileAccess.WRITE);
 	var data: Dictionary = {
 		"Properties": properties,
-		"PropertyAnwsers": property_anwsers
+		"PropertyAnwsers": property_anwsers,
+		"NoteHighest": note_highest,
+		"NoteLowest": note_lowest,
 	};
 	var text = JSON.stringify(data, "\t");
 	file.store_string(text);
 	file.close();
 
 func decide_root_note():
-	pass
+	root_note = NoteHeight.random_note(note_lowest, note_highest);
 	
 func decide_vertical_notes():
 	pass

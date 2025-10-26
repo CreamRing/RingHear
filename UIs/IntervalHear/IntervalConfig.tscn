@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjb3chmryisy3"]
+[gd_scene load_steps=5 format=3 uid="uid://cjb3chmryisy3"]
 
 [ext_resource type="Script" uid="uid://cjss5mnhsgj8c" path="res://UIs/IntervalHear/IntervalConfig.gd" id="1_ns74h"]
 [ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_02kak"]
 [ext_resource type="Texture2D" uid="uid://vn2dg5lpxkku" path="res://Textures/Back.png" id="3_0no1s"]
+[ext_resource type="Texture2D" uid="uid://dvqktw8hpvr6x" path="res://Textures/OK.png" id="4_02kak"]
 
-[node name="IntervalHear" type="CanvasLayer"]
+[node name="IntervalConfig" type="CanvasLayer"]
 script = ExtResource("1_ns74h")
 
 [node name="Control" type="Control" parent="."]
@@ -34,6 +35,20 @@ texture_disabled = ExtResource("3_0no1s")
 texture_focused = ExtResource("3_0no1s")
 stretch_mode = 0
 
+[node name="OK" type="TextureButton" parent="Control/Board"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+texture_normal = ExtResource("4_02kak")
+texture_pressed = ExtResource("4_02kak")
+texture_hover = ExtResource("4_02kak")
+texture_disabled = ExtResource("4_02kak")
+texture_focused = ExtResource("4_02kak")
+
 [node name="OptionsScroll" type="ScrollContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
@@ -60,5 +75,6 @@ size_flags_vertical = 4
 text = "音高范围选择"
 
 [connection signal="pressed" from="Control/Board/Exit" to="." method="backto_mainmenu"]
+[connection signal="pressed" from="Control/Board/OK" to="." method="start_test"]
 [connection signal="pressed" from="Control/OptionsScroll/OptionsBox/IntervalSelector" to="." method="goto_interval_selector"]
 [connection signal="pressed" from="Control/OptionsScroll/OptionsBox/RangeSelector" to="." method="goto_interval_rangeselector"]

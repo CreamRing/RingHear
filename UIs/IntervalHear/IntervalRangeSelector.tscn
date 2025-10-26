@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqtbc41xm4dyq"]
+[gd_scene load_steps=4 format=3 uid="uid://dqtbc41xm4dyq"]
 
 [ext_resource type="Texture2D" uid="uid://dvqktw8hpvr6x" path="res://Textures/OK.png" id="1_gby5d"]
 [ext_resource type="Script" uid="uid://diwx4njjkyu44" path="res://UIs/IntervalHear/IntervalRangeSelector.gd" id="1_vnynt"]
 [ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_ta2y4"]
-[ext_resource type="FontFile" uid="uid://c7uvh0vhevwtq" path="res://Fonts/Virtuoso.ttf" id="4_jy744"]
 
 [node name="IntervalRangeSelector" type="CanvasLayer"]
 script = ExtResource("1_vnynt")
@@ -45,207 +44,220 @@ stretch_mode = 0
 
 [node name="Highest" type="Control" parent="Control"]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -232.0
-offset_right = 640.0
-offset_bottom = 360.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 96.0
+offset_right = -640.0
+grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Name" type="ScrollContainer" parent="Control/Highest"]
+[node name="Name" type="OptionButton" parent="Control/Highest"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = -24.0
-offset_right = -19.0
-offset_bottom = 24.0
+offset_left = -240.0
+offset_top = -62.0
+offset_right = -140.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
-metadata/_edit_group_ = true
-
-[node name="NameList" type="ItemList" parent="Control/Highest/Name"]
-layout_mode = 2
-auto_width = true
-auto_height = true
+selected = 0
 item_count = 7
-item_0/text = "C"
-item_1/text = "D"
-item_2/text = "E"
-item_3/text = "F"
-item_4/text = "G"
-item_5/text = "A"
-item_6/text = "B"
+popup/item_0/text = "C"
+popup/item_0/id = 0
+popup/item_1/text = "D"
+popup/item_1/id = 1
+popup/item_2/text = "E"
+popup/item_2/id = 2
+popup/item_3/text = "F"
+popup/item_3/id = 3
+popup/item_4/text = "G"
+popup/item_4/id = 4
+popup/item_5/text = "A"
+popup/item_5/id = 5
+popup/item_6/text = "B"
+popup/item_6/id = 6
 
-[node name="Octave" type="ScrollContainer" parent="Control/Highest"]
+[node name="Alter" type="OptionButton" parent="Control/Highest"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 19.0
-offset_top = -64.0
-offset_right = 56.0
-offset_bottom = 64.0
+offset_left = -83.0
+offset_top = -62.0
+offset_right = 17.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
-metadata/_edit_group_ = true
-
-[node name="OctaveList" type="ItemList" parent="Control/Highest/Octave"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_jy744")
-theme_override_font_sizes/font_size = 49
-auto_width = true
-auto_height = true
+selected = 0
 item_count = 3
-item_0/text = "#"
-item_1/text = "#"
-item_2/text = "b"
+popup/item_0/text = "♮"
+popup/item_0/id = 6
+popup/item_1/text = "#"
+popup/item_1/id = 1
+popup/item_2/text = "b"
+popup/item_2/id = 2
 
-[node name="Alter" type="ScrollContainer" parent="Control/Highest"]
+[node name="Octave" type="OptionButton" parent="Control/Highest"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -18.0
-offset_top = -24.0
-offset_right = 19.0
-offset_bottom = 24.0
+offset_left = 74.0
+offset_top = -62.0
+offset_right = 174.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
-metadata/_edit_group_ = true
+selected = 0
+item_count = 9
+popup/item_0/text = "0"
+popup/item_0/id = 0
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+popup/item_4/text = "4"
+popup/item_4/id = 4
+popup/item_5/text = "5"
+popup/item_5/id = 5
+popup/item_6/text = "6"
+popup/item_6/id = 6
+popup/item_7/text = "7"
+popup/item_7/id = 7
+popup/item_8/text = "8"
+popup/item_8/id = 8
 
-[node name="AlterList" type="ItemList" parent="Control/Highest/Alter"]
-layout_mode = 2
-auto_width = true
-auto_height = true
-item_count = 7
-item_0/text = "C"
-item_1/text = "D"
-item_2/text = "E"
-item_3/text = "F"
-item_4/text = "G"
-item_5/text = "A"
-item_6/text = "B"
+[node name="Text" type="Label" parent="Control/Highest"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.0
+offset_top = 120.0
+offset_right = 24.0
+offset_bottom = 169.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "最高音"
 
 [node name="Lowest" type="Control" parent="Control"]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 640.0
-offset_top = -232.0
-offset_right = 1280.0
-offset_bottom = 360.0
+offset_top = 96.0
+grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Name" type="ScrollContainer" parent="Control/Lowest"]
+[node name="Name" type="OptionButton" parent="Control/Lowest"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = -24.0
-offset_right = -19.0
-offset_bottom = 24.0
+offset_left = -240.0
+offset_top = -62.0
+offset_right = -140.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
-metadata/_edit_group_ = true
-
-[node name="NameList" type="ItemList" parent="Control/Lowest/Name"]
-layout_mode = 2
-auto_width = true
-auto_height = true
+selected = 0
 item_count = 7
-item_0/text = "C"
-item_1/text = "D"
-item_2/text = "E"
-item_3/text = "F"
-item_4/text = "G"
-item_5/text = "A"
-item_6/text = "B"
+popup/item_0/text = "C"
+popup/item_0/id = 0
+popup/item_1/text = "D"
+popup/item_1/id = 1
+popup/item_2/text = "E"
+popup/item_2/id = 2
+popup/item_3/text = "F"
+popup/item_3/id = 3
+popup/item_4/text = "G"
+popup/item_4/id = 4
+popup/item_5/text = "A"
+popup/item_5/id = 5
+popup/item_6/text = "B"
+popup/item_6/id = 6
 
-[node name="Octave" type="ScrollContainer" parent="Control/Lowest"]
+[node name="Alter" type="OptionButton" parent="Control/Lowest"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 19.0
-offset_top = -24.0
-offset_right = 56.0
-offset_bottom = 24.0
+offset_left = -83.0
+offset_top = -62.0
+offset_right = 17.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
-metadata/_edit_group_ = true
+selected = 0
+item_count = 3
+popup/item_0/text = "♮"
+popup/item_0/id = 6
+popup/item_1/text = "#"
+popup/item_1/id = 1
+popup/item_2/text = "b"
+popup/item_2/id = 2
 
-[node name="OctaveList" type="ItemList" parent="Control/Lowest/Octave"]
-layout_mode = 2
-auto_width = true
-auto_height = true
-item_count = 7
-item_0/text = "C"
-item_1/text = "D"
-item_2/text = "E"
-item_3/text = "F"
-item_4/text = "G"
-item_5/text = "A"
-item_6/text = "B"
-
-[node name="Alter" type="ScrollContainer" parent="Control/Lowest"]
+[node name="Octave" type="OptionButton" parent="Control/Lowest"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -18.5
-offset_top = -24.0
-offset_right = 18.5
-offset_bottom = 24.0
+offset_left = 74.0
+offset_top = -62.0
+offset_right = 174.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 3
-metadata/_edit_group_ = true
+selected = 0
+item_count = 9
+popup/item_0/text = "0"
+popup/item_0/id = 0
+popup/item_1/text = "1"
+popup/item_1/id = 1
+popup/item_2/text = "2"
+popup/item_2/id = 2
+popup/item_3/text = "3"
+popup/item_3/id = 3
+popup/item_4/text = "4"
+popup/item_4/id = 4
+popup/item_5/text = "5"
+popup/item_5/id = 5
+popup/item_6/text = "6"
+popup/item_6/id = 6
+popup/item_7/text = "7"
+popup/item_7/id = 7
+popup/item_8/text = "8"
+popup/item_8/id = 8
 
-[node name="AlterList" type="ItemList" parent="Control/Lowest/Alter"]
-layout_mode = 2
-auto_width = true
-auto_height = true
-item_count = 7
-item_0/text = "C"
-item_1/text = "D"
-item_2/text = "E"
-item_3/text = "F"
-item_4/text = "G"
-item_5/text = "A"
-item_6/text = "B"
+[node name="Text" type="Label" parent="Control/Lowest"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.0
+offset_top = 120.0
+offset_right = 24.0
+offset_bottom = 169.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "最低音"
 
 [connection signal="pressed" from="Control/Board/Exit" to="." method="backto_config"]
