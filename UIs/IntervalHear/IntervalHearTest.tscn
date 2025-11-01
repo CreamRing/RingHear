@@ -1,7 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://d06snlge6oonl"]
+[gd_scene load_steps=6 format=3 uid="uid://d06snlge6oonl"]
 
 [ext_resource type="Texture2D" uid="uid://vn2dg5lpxkku" path="res://Textures/Back.png" id="1_40pc0"]
 [ext_resource type="Script" uid="uid://067krvfstyiq" path="res://UIs/IntervalHear/IntervalHearTest.gd" id="1_dyy6s"]
+[ext_resource type="Theme" uid="uid://nfr02i1mcx56" path="res://UIs/Base/MainTheme.tres" id="2_1w1x7"]
+
+[sub_resource type="GDScript" id="GDScript_1w1x7"]
+resource_name = "NextOnInterval"
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_r6pc0"]
+resource_name = "ReplayOnInterval"
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="IntervalHearTest" type="CanvasLayer"]
 script = ExtResource("1_dyy6s")
@@ -13,6 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_1w1x7")
 
 [node name="Board" type="Panel" parent="Control"]
 layout_mode = 1
@@ -40,6 +72,36 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -272.0
+offset_top = -360.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="Next" type="Button" parent="Control/Panel"]
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+text = "下一个"
+script = SubResource("GDScript_1w1x7")
+
+[node name="Replay" type="Button" parent="Control/Panel"]
+layout_mode = 1
+offset_left = 224.0
+offset_right = 428.0
+offset_bottom = 109.0
+text = "再次播放"
+script = SubResource("GDScript_r6pc0")
+
+[node name="Anwsers" type="ScrollContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -251.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Grid" type="GridContainer" parent="Control/Panel/Anwsers"]
+layout_mode = 2
+
+[connection signal="pressed" from="Control/Board/Exit" to="." method="give_up"]

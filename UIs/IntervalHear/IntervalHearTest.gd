@@ -9,3 +9,10 @@ func anim_start():
 func anim_end():
 	_tween.tween_property($Control, "modulate:a", 0, tween_wait);
 	_tween.tween_property($Control, "process_mode", PROCESS_MODE_DISABLED, 0);
+
+func give_up() -> void:
+	connect("on_exit", func(): 
+		var interval_selector = load("uid://cjb3chmryisy3").instantiate();
+		get_parent().add_child(interval_selector);
+	);
+	exit();

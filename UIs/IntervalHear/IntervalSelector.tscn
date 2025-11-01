@@ -123,4 +123,10 @@ mouse_filter = 1
 text = "大七度"
 script = ExtResource("4_mvgqi")
 
+[node name="p8" type="CheckButton" parent="Control/IntervalScroll/IntervalBox"]
+layout_mode = 2
+mouse_filter = 1
+text = "纯八度"
+script = ExtResource("4_mvgqi")
+
 [connection signal="pressed" from="Control/Board/Exit" to="." method="back_page"]
